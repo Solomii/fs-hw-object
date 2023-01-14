@@ -1,5 +1,4 @@
-/*
- створити конструктор для Cattle(brand, maxVolume, minVolume)
+/* створити конструктор для Cattle(brand, maxVolume, minVolume)
 brand
 maxVolume
 minVolume
@@ -18,6 +17,11 @@ function Cattle(brand, maxVolume, minVolume) {
     this.currentVolume = 0;
     this.isOn = false;
 
+    /**
+     * add water
+     * @param {number} value
+     * @returns {string}
+     */
     this.addWater = function (value) {
         if (value < 0) {
             console.log("error");
@@ -37,6 +41,11 @@ function Cattle(brand, maxVolume, minVolume) {
         );
     };
 
+    /**
+     * remove(made) tea
+     * @param {number} value
+     * @returns {string | number}
+     */
     this.makeTea = function (value) {
         if (value < 0) {
             console.log("error");
@@ -61,6 +70,10 @@ function Cattle(brand, maxVolume, minVolume) {
         );
     };
 
+    /**
+     * turned on cattle
+     * @returns {string}
+     */
     this.turnOn = function () {
         if (
             this.currentVolume >= this.minVolume &&
